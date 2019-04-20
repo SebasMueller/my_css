@@ -46,6 +46,7 @@
 
 #my-header {
   position: absolute;
+  z-index: 2;
   padding: 1.5rem;
   text-align: 'center';
   left: 0;
@@ -56,6 +57,15 @@
 
 @media (max-width: 768px) {
   .row {
+    font-size: 20px;
+  }
+  #my-header {
+    font-size: 20px;
+  }
+  #date-select {
+    font-size: 20px;
+  }
+  #route-planner {
     font-size: 20px;
   }
   #map {
