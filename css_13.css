@@ -20,6 +20,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #date-select {
   position: absolute;
+  width: 60%;
   z-index: 2;
   margin-top: 0;
   left: 0;
@@ -32,6 +33,7 @@
 }
 #route-planner {
   position: absolute;
+  width: 60%;
   z-index: 2;
   margin-top: 10%;
   left: 0;
