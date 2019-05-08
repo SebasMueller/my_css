@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
 body {
-  background-color: darkgrey;
+  background-color: grey;
 }
 
 /*Headers*/
@@ -52,7 +52,7 @@ h6 {
 
 /* BG */
 #bg {
-  background-color: darkgrey;
+  background-color: grey;
   position: fixed;
   top: 0;
   left: 0;
@@ -62,16 +62,9 @@ h6 {
 
 
 /* Button */
-#date_select,
-#my-date-picker,
-#date,
 #input-start-route,
 #input-end-route,
-#calc-route-button,
-input,
-.input,
-button,
-.button {
+#calc-route-button {
   position: relative;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -84,11 +77,11 @@ button,
   background-color: transparent;
   border-radius: 8px;
   border: 0;
-  box-shadow: inset 0 0 0 2px #ffffff;
+  box-shadow: inset 0 0 0 2px grey;
   /*padding: 0 1.25rem 0 1.25rem;*/
   height: 3.00rem;
   line-height: 2.75rem;
-  color: darkgrey;
+  color: grey !important;
   cursor: pointer;
   display: inline-block;
   font-size: 1.5rem;
@@ -100,72 +93,96 @@ button,
   outline: 0;
   text-align: center;
   z-index: 3; }
-  input[type="submit"]:hover,
-  input[type="reset"]:hover,
-  input[type="button"]:hover,
-  button:hover,
-  .button:hover {
-    background-color: rgba(255, 255, 255, 0.075); }
-  input[type="submit"]:active,
-  input[type="reset"]:active,
-  input[type="button"]:active,
-  button:active,
-  .button:active {
-    background-color: rgba(255, 255, 255, 0.175); }
-  input[type="submit"].icon:before,
-  input[type="reset"].icon:before,
-  input[type="button"].icon:before,
-  button.icon:before,
-  .button.icon:before {
-    margin-right: 0.5em; }
-  input[type="submit"].fit,
-  input[type="reset"].fit,
-  input[type="button"].fit,
-  button.fit,
-  .button.fit {
-    display: block;
-    margin: 0 0 1rem 0;
-    width: 100%; }
-  input[type="submit"].special,
-  input[type="reset"].special,
-  input[type="button"].special,
-  button.special,
-  .button.special {
-    background-color: #ffffff;
-    color: #1b1f22 !important;
-    font-weight: 600; }
-  input[type="submit"].disabled, input[type="submit"]:disabled,
-  input[type="reset"].disabled,
-  input[type="reset"]:disabled,
-  input[type="button"].disabled,
-  input[type="button"]:disabled,
-  button.disabled,
-  button:disabled,
-  .button.disabled,
-  .button:disabled {
-    -moz-pointer-events: none;
-    -webkit-pointer-events: none;
-    -ms-pointer-events: none;
-    pointer-events: none;
-    cursor: default;
-    opacity: 0.25; }
+  .DateInput__input.needsclick,
+  .DateInput.DateInput--open-down {
+      background-color: transparent;
+  }
+@media screen and (max-width: 736px) {
+  #input-start-route,
+  #input-end-route,
+  #calc-route-button,
+  .SingleDatePickerInput,
+  .DateInput__display-text--has-input,
+  .DateInput__input.needsclick {
+    font-size: 0.9rem;
+    height: 2rem;
+    line-height: 1.9rem;
+  }
+}
+  
+
+#map{
+  position: relative;
+  margin-top: -20vh;
+  width: 100vw;
+}
+
+@media screen and (max-width: 736px) {
+  #map{
+    margin-top: -35vh;
+    margin-left: -3%;
+  }
+}
+
+#graph-geo {
+  height: 80vh;
+}
 
 #date_select {
     z-index: 4;
 }
 
-#map,
-#graph-geo {
-    background-color: darkgrey;
+.DateInput__display-text--has-input{
+  color: grey !important;
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: "Source Sans Pro";
+  letter-spacing: 0.2rem;
+  width: 144px;
 }
 
-@media screen and (max-width: 736px) {
-  button{
-    font-size: 1rem;
-    height: 2.25rem;
-    line-height: 2rem;
-  }
+.SingleDatePicker {
+  z-index: 5;
 }
+
+.SingleDatePicker__picker,
+.transition-container,
+.CalendarMonth--horizontal,
+.DayPickerNavigation--horizontal,
+.DayPickerNavigation__next,
+.DayPickerNavigation__prev {
+  background-color: lightgrey;
+}
+.DayPickerNavigation--horizontal,
+.DayPickerNavigation__next,
+.DayPickerNavigation__prev {
+  color: black;
+}
+
+.CalendarDay {
+  background-color: grey;
+}
+
+.CalendarDay--blocked-out-of-range {
+  background-color: lightgrey;
+}
+
+.SingleDatePickerInput {
+    background-color: transparent;
+    border-radius: 8px;
+    border: 0;
+    box-shadow: inset 0 0 0 2px grey;
+    /*padding: 0 1.25rem 0 1.25rem;*/
+    height: 3.00rem;
+    line-height: 2.75rem;
+    width: 174px;
+}
+
+.DateInput__input.needsclick {
+  width: 174px;
+  font-size: 1.5rem;
+}
+
 
 /* Footer */
 #footer {  /*ease-in-out of footer
@@ -213,8 +230,10 @@ a { /* not sure */
 
 #subtitle {
   text-align: center;
-  margin-top: -2.5%;
-  font-weight: 300;
+  margin-top: -5%;
+  font-weight: 200;
+  font-family: "Source Sans Pro";
+  color: grey;
 }
 
 #buttoncontainer {
