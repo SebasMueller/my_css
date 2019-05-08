@@ -152,7 +152,8 @@ button,
     z-index: 4;
 }
 
-#map {
+#map,
+#graph-geo {
     background-color: darkgrey;
 }
 
